@@ -9,4 +9,4 @@ FROM httpd:latest
 RUN sed -i "s/80/8080/g" /usr/local/apache2/conf/httpd.conf
 COPY --from=build /app/www/ /usr/local/apache2/htdocs/
 EXPOSE 8080
-CMS ["httpd-foreground"]
+CMD ["httpd-foreground"]
